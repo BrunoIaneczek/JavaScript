@@ -1,0 +1,18 @@
+Operadores lógicos em javascript
+
+A ordem dos operadores nas expressões são Aritméticos, relacionais e lógicos
+
+A ordem dos relacionais e !, &&, ||
+
+! -> Negação (Não)
+&& -> Conjunção (E)
+|| -> Disjunção (OU)
+
+OPERADOR TERNÁRIO
+
+teste ? true : false
+ex:
+média>=7?'Aprovado':'Reprovado'
+
+?
+: 

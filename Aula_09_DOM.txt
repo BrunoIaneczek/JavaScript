@@ -1,0 +1,9 @@
+DOM
+
+selecionando elementos
+
+por marca
+por ID
+por Nome
+por Classe
+por seletor
