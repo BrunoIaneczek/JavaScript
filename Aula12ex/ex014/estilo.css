@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(35, 35, 179);
+    font: normal 15pt arial;
+}
+
+header{
+    color: white;
+    text-align: center; /* Centraliza o texto*/
+}
+
+section{
+    background-color: white;
+    border-radius: 10px; /* Arredonda a borda */
+    padding: 15px; /* Espaço interiror do label */
+    width: 500px; /* Largura do label */
+    margin: auto; /* Centraliza na tela*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
+}
+
+div {
+    text-align: center;
+    padding: 8px;
+}
+
+footer{ 
+    color: white;
+    text-align: center;
+    font-style: italic; /* Estilo do texto*/
+}

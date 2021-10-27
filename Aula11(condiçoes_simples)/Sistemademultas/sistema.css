@@ -1,0 +1,37 @@
+body{
+    background-color:rgb(2, 39, 41);
+    font: normal 20pt Arial;
+    padding: 5px;
+    
+}
+header{
+    color: snow;
+    text-align: center;
+    padding: 10px
+
+}
+section{
+    background-color: turquoise;
+    border-radius: 10px;
+    width: 500px;
+    padding: 5px;
+    margin: auto;
+    box-shadow:  inset 0 0 1em rgb(5, 5, 1), 0 0 1em rgba(236, 227, 227, 0.233);
+}
+input{
+    background-color:white;
+    border-radius: 10px;
+    width: 250px;
+    font: normal 15pt Arial;
+}
+.divbtn {
+    margin:5px;
+}
+.btn {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-radius:10px;
+    font: normal 13pt arial
+    
+}
