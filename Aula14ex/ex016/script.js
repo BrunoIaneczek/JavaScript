@@ -1,17 +1,33 @@
 function contar(){
-    var inicio =  document.getElementById('numeroinicial').value
-    var fim = document.getElementById('numerofinal').value
-    var passo = document.getElementById('passo').value
+    var inicio =  document.getElementById('numeroinicial')
+    var fim = document.getElementById('numerofinal')
+    var passo = document.getElementById('passo')
     var res = document.getElementById('res')
-    var i = parseInt(inicio)
-    var f = parseInt(fim)
-    var p = parseInt(passo)
-    
-    
-    for(i; i <= f; i+=p){
-        res.innerHTML = `calhorada`
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        window.alert('FALTAM DADOS!')
+    }else{
+        res.innerHTML = 'Contando... <br>'//quebra de linha em inerhtml
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (p <= 0) {
+            window.alert('Passo inválido, considerando o valor como 1')
+            p = 1   
+        }
+        if (i > f) {
+            //contagem crescente
+            for(let c = i; c >= f; c-=p){
+                res.innerHTML += ` ${c}`
+            }
+        }else{
+            //contagem regressiva
+            for(let c = i; c <= f; c+=p){
+                res.innerHTML += `      ${c} \u{1F537}`
+            }
+        }
         
-    }
+        
+    }   res.innerHTML += `\u{1F3C1}`
     
 }
 
