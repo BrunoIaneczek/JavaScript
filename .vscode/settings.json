@@ -1,3 +1,4 @@
 {
-    "miramac.node.showInfo": false
+    "miramac.node.showInfo": false,
+    "liveServer.settings.port": 5501
 }
