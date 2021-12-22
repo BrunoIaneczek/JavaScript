@@ -15,12 +15,12 @@ function contar(){
             p = 1   
         }
         if (i > f) {
-            //contagem crescente
+            //contagem regressiva
             for(let c = i; c >= f; c-=p){
                 res.innerHTML += ` ${c}`
             }
         }else{
-            //contagem regressiva
+            //contagem crescente
             for(let c = i; c <= f; c+=p){
                 res.innerHTML += `      ${c} \u{1F537}`
             }
