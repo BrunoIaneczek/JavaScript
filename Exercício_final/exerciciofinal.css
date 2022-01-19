@@ -11,8 +11,8 @@ header{
 section{
     background-color: white;
     border-radius: 10px; /* Arredonda a borda */
-    padding: 15px; /* Espaço interiror do label */
-    width: 500px; /* Largura do label */
+    padding: 10px; /* Espaço interiror do label */
+    width: 600px; /* Largura do label */
     margin: auto; /* Centraliza na tela*/
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
 }

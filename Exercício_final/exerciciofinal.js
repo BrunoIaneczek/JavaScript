@@ -3,29 +3,53 @@ let tabela = document.getElementById('tabela')
 let res = document.getElementById('res')
 let valores = []
 
-function limpar(){
-    document.getElementById('n').value = ''
-}       
-function analisar(){
-   
-    if (num.value< 1 || num.value> 100 || num.value.length == 0){
-        alert('valor inválido')
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    }else {
+        return false
+    }
+}
+
+function inLista(n,vetor){
+    if(vetor.indexOf(Number(n))!=-1){
+        return true
     }else{
-        let item = document.createElement('option')
+        return false
+    }
+}
+
+function adicionar(){
+    if (isNumero(num.value) && !inLista(num.value,valores)){
+        valores.push(Number(num.value))
+        let item = document.createElement('option' )
         item.text = `Valor ${num.value} adicionado`
         tabela.appendChild(item)
-        valores.push(num.value)       
+        res.innerHTML = ''
+        
+        
+    }else{
+         alert('Valor já adicionado ou inválido')      
     }
+    num.value = ''
+    num.focus()
 
 
 }
 function finalizar(){
-    res.innerHTML = `Ao todo foram cadastrados ${valores.length} números <br>
-    O maior valor informado foi ${maiorvalor(valores)} <br>
-    O menor valor informado foi ${menorvalor(valores)}<br>
-    A soma de todos valores informados é ${somatotal(valores)}<br>
-    A média dos valores é ${media(valores)}<br>
-    ${valores}`
+    if (valores.length > 0){
+     res.innerHTML =''
+     res.innerHTML +=`<p>Ao todo temos ${valores.length}</p>`
+     res.innerHTML +=`<p>O maior valor informado é ${maiorvalor(valores)}</p>`
+     res.innerHTML +=`<p>O menor valor informado foi ${menorvalor(valores)}</p>`
+     res.innerHTML +=`<p>Somando todos os valores temos, ${somatotal(valores)}</p>`
+     res.innerHTML +=`<p>A média dos valores é ${somatotal(valores)/valores.length} </p>`
+
+        
+    }else{
+        alert(`Adicione valores`)
+    }
+    
     
 }
 function maiorvalor(vetor){
@@ -63,13 +87,6 @@ function somatotal(vetor){
 }return s   
 }
 
-function media(vetor){
-    s=0
-    for(let pos
-         in vetor){
-        s+=vetor[pos
-        ]
-        media = s/vetor.length
-    }return media
-}
+
+
 
